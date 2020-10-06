@@ -1,0 +1,22 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="article1">
+    <h2>{{article1.title}}</h2>
+    <p>{{article1.text}}</p>
+    </div>
+
+<div class="article2">
+    <h2>{{article2.title}}</h2>
+    <p>{{article2.text}}</p>
+    </div>
+    
+  </div>
+{% endblock %}
+
+{% block count %}
+<div class="next_button">
+    <label> Next </label>
+    <a href="{{next_url}}" class="button">Next</a>
+</div>
+{% endblock %}
