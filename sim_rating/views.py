@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from sim_rating.models import Link, Article, Sim_rate, Topic, Source
 from itertools import combinations
+import random
 # Create your views here.
 
 count = 0
@@ -9,7 +10,7 @@ def main(request):
     global articles, count
     num_articles = Article.objects.all().count()
     context = {'num_articles': num_articles}
-    articles = Article.objects.order_by('?')[:4]
+    articles = random.sample(list(Article.objects.all()), 4)
     count = 1
     return render(request, 'main.html', context=context)
 
@@ -22,7 +23,7 @@ def SimRateView1(request):
     article2 = articles[article_pair[1]]
     count += 1
     
-    if count >= 6:
+    if count >= 7:
         next_url = "end"
     else:
         next_url = chr(count+96)

@@ -2,13 +2,11 @@
 
 {% block content %}
 <div class="article1">
-    <h2>{{article1.title}}</h2>
-    <p>{{article1.text}}</p>
+    {{article1.display | safe}}
     </div>
 
 <div class="article2">
-    <h2>{{article2.title}}</h2>
-    <p>{{article2.text}}</p>
+    {{article2.display | safe}}
     </div>
     
   </div>

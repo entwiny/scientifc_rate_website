@@ -12,3 +12,10 @@ urlpatterns = [
     path('sim_rates/end', views.end, name='end'),
     
     ]
+
+
+# 1. main_page add id input
+# 2. click submit to submit the data and redirect to the next page
+# 3. change the similarity of two articles to 7 fixed values
+# 4. every article will have one visible rolling
+# 5. add a process line in the beside part
