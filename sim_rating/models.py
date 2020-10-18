@@ -59,7 +59,7 @@ class Article(models.Model):
     title = models.CharField(max_length=100, null=True)
     topic = models.ForeignKey('Topic', on_delete=models.SET_NULL, null=True, blank=True)
     text = models.TextField(blank=True, null=True)
-    display = models.TextField(blank, null=True)
+    display = models.TextField(blank=True, null=True)
     image = models.ImageField(blank=True, null=True)
     source = models.ManyToManyField(Source, null=True)
     date_published = models.DateField(null=True, blank=True)
