@@ -3,6 +3,10 @@ from sim_rating import views
 
 urlpatterns = [
     path('', views.main, name='main'),
+    path('article1', views.ArticleView, name='article1'),
+    path('article2', views.ArticleView, name='article2'),
+    path('article3', views.ArticleView, name='article3'),
+    path('article4', views.ArticleView, name='article4'),
     path('sim_rates/a', views.SimRateView1, name='similarity-rates'),
     path('sim_rates/b', views.SimRateView1, name='similarity-rates2'),
     path('sim_rates/c', views.SimRateView1, name='similarity-rates3'),

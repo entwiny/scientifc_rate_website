@@ -45,15 +45,25 @@
         </div>
             
         <div class='input_rating'>
-            <label for="rating">Please input the similarity of these two articles (from -2 to 2): </label>
-            <input type="float">
-            <button>Submit</button>
-            {% block count %}
+            <label for="rating">Please input the similarity of these two articles: </label>
+            <div>
+                <!-- <input type = 'submit' name='Submit'>
+                <button>Submit</button> -->
+                <form method = 'POST' target = {{next_url}}>
+                    {% csrf_token %}
+                    
+                {{ form.as_p }}
+                    <br>
+                    <input type='submit' name='Submit'>
+                </form>
+            </div>
+            
+            <!-- {% block count %}
             <div class="next_button">
                 <label> Next </label>
                 <a href="{% url 'similarity-rates'}" class="button">Next</a>
             </div>
-            {% endblock %}
+            {% endblock %} -->
         </div>
         
     </div>

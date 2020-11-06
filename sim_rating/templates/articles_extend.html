@@ -1,0 +1,14 @@
+{% extends "articles.html" %}
+
+{% block content %}
+<div class="article">
+    {{article1.display | safe}}
+    </div>
+{% endblock %}
+
+
+{% block next %}
+<div class="next_button">
+    <a href="{{next_url}}" class="button">Next</a>
+</div>
+{% endblock %}

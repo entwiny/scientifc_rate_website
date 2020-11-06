@@ -1,5 +1,12 @@
 {% extends "base_generic.html" %}
 
+{% block sidebar %}
+{% load static %}
+<img src="{% static 'images/sr_1.png' %}" alt="Scientific Rating">
+<label for="rating_progress">Rating Progress:</label>
+<progress id="rating_progress" max="100" value="{{progress}}"> {{progress_text}} </progress>
+{% endblock %}
+
 {% block content %}
 <div class="article1">
     {{article1.display | safe}}
@@ -9,12 +16,15 @@
     {{article2.display | safe}}
     </div>
     
-  </div>
 {% endblock %}
 
-{% block count %}
-<div class="next_button">
-    <label> Next </label>
-    <a href="{{next_url}}" class="button">Next</a>
+<div>
+    <form method = 'POST' target = {{next_url}}>
+        {% csrf_token %}
+        
+    {{ form.as_p }}
+        <br>
+        <input type='submit' name='Submit'>
+    </form>
 </div>
-{% endblock %}
+

@@ -75,7 +75,17 @@ class Sim_rate(models.Model):
     pair_id = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text="Unique ID for the article pair")
     article1 = models.ForeignKey('Article', on_delete=models.SET_NULL, null=True, related_name='article1')
     article2 = models.ForeignKey('Article', on_delete=models.SET_NULL, null=True, related_name='article2')
-    similarity = models.FloatField()
+
+    simi_choice = (
+        (-3,"totally different"),
+        (-2,"almost different"),
+        (-1,"a little bit different"),
+        (0, "nutral"),
+        (1, "a little bit similar"),
+        (2, "almost similar"),
+        (3, "totally similar")
+    )
+    similarity = models.FloatField(choices=simi_choice)
     
     def __str__(self):
         """
