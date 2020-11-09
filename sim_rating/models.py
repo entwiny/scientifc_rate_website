@@ -80,12 +80,13 @@ class Sim_rate(models.Model):
         (-3,"totally different"),
         (-2,"almost different"),
         (-1,"a little bit different"),
-        (0, "nutral"),
+        (0, "neutral"),
         (1, "a little bit similar"),
         (2, "almost similar"),
         (3, "totally similar")
     )
     similarity = models.FloatField(choices=simi_choice)
+    user_id = models.CharField(max_length=30, help_text="User ID", null=True)
     
     def __str__(self):
         """

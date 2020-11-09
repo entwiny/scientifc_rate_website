@@ -1,5 +1,12 @@
 {% extends "articles.html" %}
 
+{% block sidebar %}
+{% load static %}
+<img src="{% static 'images/sr_1.png' %}" alt="Scientific Rating">
+<label for="rating_progress">Rating Progress:</label>
+<progress id="rating_progress" max="100" value="{{progress}}"> 70% </progress>
+{% endblock %}
+
 {% block content %}
 <div class="article">
     {{article1.display | safe}}
@@ -12,3 +19,5 @@
     <a href="{{next_url}}" class="button">Next</a>
 </div>
 {% endblock %}
+
+

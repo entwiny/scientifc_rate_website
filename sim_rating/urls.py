@@ -14,7 +14,6 @@ urlpatterns = [
     path('sim_rates/e', views.SimRateView1, name='similarity-rates5'),
     path('sim_rates/f', views.SimRateView1, name='similarity-rates6'),
     path('sim_rates/end', views.end, name='end'),
-    
     ]
 
 

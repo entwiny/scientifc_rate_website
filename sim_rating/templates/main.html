@@ -23,6 +23,15 @@
             <p>Welcome to Scientific Rating, a website developed by <em>Tu Tu, Chenqi Fan and Yu Ding</em> from Columbia!</p>
             <p>We already have {{ num_articles }} articles </p>
             </div>
+
+        <div class="userid">
+            <form method = 'POST'>
+                {% csrf_token %}
+                {{ form.as_p }}
+                <br>
+                <input type='submit' name='Submit'>
+            </form>
+        </div>
         
         <div class="yes_button">
             <label> Are you ready to rate the articles? </label>

@@ -29,8 +29,8 @@ h2 {
     background-color: white;
 }
 
-img {
-    width: 100%;
+.sidebar img {
+    width: 80%;
     height: 7%;
 }
 
@@ -57,9 +57,8 @@ img {
     left: 0%;
     top: 0%;
     vertical-align: top;
-    overflow-y: auto;
+    overflow-y: scroll;
     overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
 }
 .article2{
     padding: 5%;
@@ -69,13 +68,18 @@ img {
     left: 55%;
     top: 0%;
     vertical-align: top;
-    overflow-y: auto;
+    overflow-y: scroll;
     overflow-x: hidden;
 }
-#aritcle_text{
-    overflow-y: visible;
-    
+
+/*#aritcle_text{*/
+/*    overflow-y: visible;*/
+/*}*/
+
+.articles img{
+    max-width: 100%
 }
+
 .input_rating{
     margin: auto;
     position: absolute;
